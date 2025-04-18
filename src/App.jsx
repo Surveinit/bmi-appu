@@ -65,7 +65,10 @@ export default function App() {
 
   return (
     <div>
-      <h1>BMI appu</h1>
+      <div className="intro">
+        <h1>BMI appu</h1>
+        <p className="description">(Calculate your own BMI)</p>
+      </div>
 
       <div className="input-form">
         <div className="height-input">
@@ -98,25 +101,27 @@ export default function App() {
         </div>
       </div>
 
-      {bmi && (
-        <div>
-          <h2>Your Bmi,</h2>
-          <h3>
-            {bmi} ({category})
-          </h3>
-        </div>
-      )}
+      <div className="output">
+        {bmi && (
+          <div>
+            <h2>Your Bmi,</h2>
+            <h4>
+              {bmi} ({category})
+            </h4>
+          </div>
+        )}
 
-      {gifUrl && (
-        <div>
-          <img
-            src={gifUrl}
-            alt="{category}"
-            className="giphy-img"
-            style={{ width: "250px", marginTop: "1rem" }}
-          />
-        </div>
-      )}
+        {gifUrl && (
+          <div>
+            <img
+              src={gifUrl}
+              alt="{category}"
+              className="giphy-img"
+              style={{ width: "250px", marginTop: "1rem" }}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
