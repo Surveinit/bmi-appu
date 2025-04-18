@@ -70,57 +70,59 @@ export default function App() {
         <p className="description">(Calculate your own BMI)</p>
       </div>
 
-      <div className="input-form">
-        <div className="height-input">
-          <label>
-            Height (cm):
-            <input
-              type="number"
-              value={height}
-              onChange={(e) => setHeight(e.target.value)}
-              placeholder="e.g. 170"
-            />
-          </label>
-        </div>
-
-        <div className="weight-name">
-          <label>
-            Weight (kg):
-            <input
-              type="number"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-              placeholder="e.g. 72"
-            />
-          </label>
-        </div>
-
-        <div className="buttons">
-          <button onClick={resetForm}>Reset 🔄</button>
-          <button onClick={calculateBmi}>Calculate 🙂‍↔️</button>
-        </div>
-      </div>
-
-      <div className="output">
-        {bmi && (
-          <div>
-            <h2>Your Bmi,</h2>
-            <h4>
-              {bmi} ({category})
-            </h4>
+      <div className="section-container">
+        <div className="input-form">
+          <div className="height-input">
+            <label>
+              Height (cm):
+              <input
+                type="number"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                placeholder="e.g. 170"
+              />
+            </label>
           </div>
-        )}
 
-        {gifUrl && (
-          <div>
-            <img
-              src={gifUrl}
-              alt="{category}"
-              className="giphy-img"
-              style={{ width: "250px", marginTop: "1rem" }}
-            />
+          <div className="weight-name">
+            <label>
+              Weight (kg):
+              <input
+                type="number"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                placeholder="e.g. 72"
+              />
+            </label>
           </div>
-        )}
+
+          <div className="buttons">
+            <button onClick={resetForm}>Reset 🔄</button>
+            <button onClick={calculateBmi}>Calculate 🙂‍↔️</button>
+          </div>
+        </div>
+
+        <div className="output">
+          {bmi && (
+            <div>
+              <h2>Your Bmi,</h2>
+              <h4>
+                {bmi} ({category})
+              </h4>
+            </div>
+          )}
+
+          {gifUrl && (
+            <div>
+              <img
+                src={gifUrl}
+                alt="{category}"
+                className="giphy-img"
+                style={{ width: "250px", marginTop: "1rem" }}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
