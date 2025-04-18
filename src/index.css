@@ -12,3 +12,17 @@ body {
   padding: 0;
   font-size: 1.2rem;
 }
+
+input,
+button {
+  font-family: "Instrument Serif", serif;
+  transition: 0.2s;
+}
+
+input:hover {
+  transform: scale(1.05);
+}
+
+input::placeholder {
+  font-family: "Instrument Serif", serif;
+}
