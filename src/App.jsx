@@ -118,7 +118,6 @@ export default function App() {
                 src={gifUrl}
                 alt="{category}"
                 className="giphy-img"
-                style={{ width: "250px", marginTop: "1rem" }}
               />
             </div>
           )}

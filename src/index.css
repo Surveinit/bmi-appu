@@ -74,7 +74,7 @@ button {
   border: 1px solid var(--bg);
   border-radius: 4px;
   padding: 0.7em 1.5em;
-  width: 100%;
+  width: 50%;
   height: 90%;
   transition: 0.2s;
 }
@@ -86,8 +86,7 @@ button:hover {
 
 #giphy-img {
   width: 100%;
-  min-width: 200px;
-  max-width: 500px;
+  max-width: 400px;
   height: auto;
   transition: opacity 0.3s ease;
 }
